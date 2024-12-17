@@ -8,12 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Section -->
+   
     <div class="headline">
         <h1>Shorten <span>Your Loooong Links :)</span></h1>
     </div>
 
-    <!-- URL Input Section -->
     <div class="input-container">
         <form method="POST" action="/url">
             <label for="url">Enter your URL:</label>
@@ -31,7 +30,6 @@
         </form>
     </div>
 
-    <!-- URL Generated Section -->
     <% if (locals.id) { %>
     <div class="result">
         <p>URL Generated: 
@@ -42,7 +40,6 @@
     </div>
     <% } %>
 
-    <!-- Table Section -->
     <% if (locals.urls) { %>
     <div class="table-container">
         <table>
