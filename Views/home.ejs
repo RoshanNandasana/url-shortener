@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="headline">
+        <h1>Shorten <span>Your Loooong Links :)</span></h1>
+    </div>
+
+    <!-- URL Input Section -->
+    <div class="input-container">
+        <form method="POST" action="/url">
+            <label for="url">Enter your URL:</label>
+            <div class="input-group">
+                <input 
+                    type="text"
+                    id="url"
+                    name="url"       
+                    placeholder="https://example.com"
+                />
+                <button class="btn" type="submit">
+                    Generate
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- URL Generated Section -->
+    <% if (locals.id) { %>
+    <div class="result">
+        <p>URL Generated: 
+            <a href="http://localhost:8001/url/<%= id %>" target="_blank">
+                http://localhost:8001/url/<%= id %>
+            </a>
+        </p>
+    </div>
+    <% } %>
+
+    <!-- Table Section -->
+    <% if (locals.urls) { %>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>S.no</th>
+                    <th>ShortId</th>
+                    <th>Redirect</th>
+                    <th>Clicks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% urls.forEach((url, index) => { %>
+                <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= url.shortId %></td>
+                    <td><a href="<%= url.redirectURL %>" target="_blank"><%= url.redirectURL %></a></td>
+                    <td><%= url.visitHistory.length %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <% } %>
+</body>
+</html>
