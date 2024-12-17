@@ -21,16 +21,24 @@ A simple and efficient URL shortener built with **Node.js**, **Express**, and **
 
 ## 🚀 Installation  
 
-1. Clone the repository:  
+1. **Clone the repository:**
+   Open the terminal in VS Code and go to the folder where you cloned the GitHub repository  
    ```bash
    git clone https://github.com/RoshanNandasana/url-shortener.git
    cd url-shortener
 
-2. Run the application:
+2. **Install Project Dependencies:**
+   Run the following command to install all required Node.js dependencies listed in the package.json file:
+   ```bash
+   npm install
+
+3. **Run the application:**
+   Once the dependencies are installed, start the server with:
    ```bash
    npm start
 
-3. Visit the application at:
+4. **Visit the application at:**
+   Open your browser and go to
    ```bash
    http://localhost:8001
 
