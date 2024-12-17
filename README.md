@@ -35,3 +35,14 @@ A simple and efficient URL shortener built with **Node.js**, **Express**, and **
    http://localhost:8001
 
 
+ ## 🖥️ Usage  
+
+### 1. Upload or enter your long URL to generate a shortened version instantly.
+### 2. Easily search and retrieve the newly generated short URL.
+### 3. Track and analyze the number of clicks for each shortened URL.
+
+
+
+
+
+
